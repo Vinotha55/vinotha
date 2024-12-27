@@ -1,0 +1,15 @@
+//program with and without return
+#include<stdio.h>
+int sum(int a,int b)
+{
+printf("The sum of the value  %d",a+b);
+}
+int main()
+{
+int x,y;
+x=10;
+y=20;
+sum(x,y);
+return 0;
+}
+
