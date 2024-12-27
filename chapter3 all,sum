@@ -1,0 +1,35 @@
+#include<stdio.h>
+void add(int num1, int num2)
+{
+    printf("%d\n",num1+num2);
+}
+int sub(int num1,int num2)
+{
+    return(num1-num2);
+}
+void mul()
+{
+    int num1,num2;
+    scanf("%d %d",&num1,&num2);
+    printf("%d\n",num1*num2);
+}
+int divide()
+{
+    int num1,num2;
+    scanf("%d %d",&num1,&num2);
+    return(num1/num2);
+}
+int main()
+{
+    int val1,val2,fn2,fn4;
+    scanf("%d %d",&val1,&val2);
+    add(val1,val2);
+    fn2=sub(val1,val2);
+    printf("%d\n",fn2);
+    mul();
+    fn4=divide();
+    printf("%d",fn4);
+    return 0;
+
+}
+
