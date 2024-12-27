@@ -1,0 +1,12 @@
+#include<stdio.h>
+void sum()
+{
+int x=10,y=20,sum;
+printf("The sum is %d",x+y);
+
+}
+void main()
+{
+sum();
+}
+
