@@ -1,0 +1,14 @@
+#include<stdio.h>
+int sum()
+{
+int x=5,y=10;
+int sum;
+printf("The output is %d",sum=x+y);
+return sum;
+}
+int main()
+{
+sum();
+return 0;
+}
+
