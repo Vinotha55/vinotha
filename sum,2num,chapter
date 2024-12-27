@@ -1,0 +1,18 @@
+#include<stdio.h>
+int sum (int n);
+int main()
+{
+int n,result;
+printf("Number is");
+scanf("%d",&n);
+result=sum(n);
+printf("The value is %d",result);
+}
+int sum(int n)
+{
+if(n>0)
+return n+sum(n-1);
+else
+return 0;
+}
+
