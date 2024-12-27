@@ -1,0 +1,21 @@
+#include <stdio.h>
+int sum(int k);
+int main()
+{
+   int r=sum(4);
+    printf("%d",r);
+    return 0;
+}
+int sum(int k)
+{
+
+    if(k>0)
+    {
+        int r=k+sum(k-1);
+    }
+    else
+    {
+        return 0;
+    }
+}
+
