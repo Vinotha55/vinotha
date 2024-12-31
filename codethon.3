@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+
+struct Person {
+    unsigned int age : 7; 
+};
+
+int main() {
+    struct Person p; 
+
+    
+    p.age = 25;
+
+    
+    printf("Age: %u\n", p.age);
+
+    return 0;
+}
+
