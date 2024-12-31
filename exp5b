@@ -1,0 +1,44 @@
+
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+char* custom_strtok(char* str, const char* delim) {
+    static char* current_position = NULL;
+    if (str != NULL) {
+        current_position = str;
+    }
+    if (current_position == NULL) {
+        return NULL;
+    }
+    while (*current_position && strchr(delim, *current_position)) {
+        current_position++;
+    }
+    if (*current_position == '\0') {
+        return NULL;
+    }
+    char* token_start = current_position;
+    while (*current_position && !strchr(delim, *current_position)) {
+        current_position++;
+    }
+    if (*current_position != '\0') {
+        *current_position = '\0';
+        current_position++;
+    }
+
+    return token_start;
+}
+int main() {
+    char str[] = "Hello.world!welcome to C programming";
+    const char* delimiters = ", .!";
+    char* token = custom_strtok(str, delimiters);
+    while (token != NULL) {
+        printf("Token: %s\n", token);
+        token = custom_strtok(NULL, delimiters);
+    }
+
+    return 0;
+}
+
+
+
