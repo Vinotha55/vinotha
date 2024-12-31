@@ -1,0 +1,8 @@
+#include<stdio.h>
+typedef int*IntPtr;
+int main(){
+    int x=10;
+    IntPtr ptr=&x;
+    printf("Value of x:%d\n",*ptr);
+    return 0;
+}
