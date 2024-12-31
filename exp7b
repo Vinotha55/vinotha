@@ -1,0 +1,70 @@
+#include<stdio.h>
+
+
+int add(int a, int b);
+int subtract(int a, int b);
+
+int main() {
+    int size, i;
+    int arr[50];
+    int a, b, choice, result;
+    int (*operation)(int, int); 
+
+   
+    printf("Enter size: ");
+    scanf("%d", &size);
+
+    
+    printf("Enter the elements:\n");
+    for (i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    
+    printf("Accessing array elements using pointers:\n");
+    int *ptr = arr;
+    for (i = 0; i < size; i++) {
+        printf("%d ", *(ptr + i));
+    }
+    printf("\n");
+
+    
+    printf("Enter two integers: ");
+    scanf("%d %d", &a, &b);
+
+    
+    printf("Choose operation:\n");
+    printf("0: Add\n");
+    printf("1: Subtract\n");
+    scanf("%d", &choice);
+
+    if (choice == 0) {
+        operation = add;
+    } else if (choice == 1) {
+        operation = subtract;
+    } else {
+        printf("Invalid choice\n");
+        return 1;
+    }
+
+    
+    result = operation(a, b);
+    if (choice == 0) {
+        printf("Pointer to add: %d\n", result);
+    } else {
+        printf("Pointer to subtract: %d\n", result);
+    }
+
+    return 0;
+}
+
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int subtract(int a, int b) {
+    return a - b;
+}
+
+
