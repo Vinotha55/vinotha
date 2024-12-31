@@ -1,0 +1,24 @@
+#include<stdio.h>
+enum Colors{
+    RED,
+    GREEN,
+    BLUE
+};
+int main(){
+    enum Colors color=RED;
+    switch(color){
+        case RED:
+        printf("Color is red\n");
+        break;
+        case GREEN:
+         printf("Color is green\n");
+         break;
+        case BLUE:
+         printf("Color is blue\n");
+         break;
+         default:
+          printf("Invalid Color\n");
+    }
+    return 0;
+}
+
