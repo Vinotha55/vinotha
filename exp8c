@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Book {
+    char title[50];
+    char author[50];
+    float price;
+    char isbn[20];
+};
+
+int main() {
+    struct Book books[10];
+
+    printf("Enter details of 10 books:\n");
+    for (int i=0; i < 10; i++) {
+        printf("\nBook %d:\n", i + 1);
+
+        printf("Enter title: ");
+        getchar();
+        fgets(books[i].title, 50, stdin);
+        books[i].title[strcspn(books[i].title, "\n")] = '\0';
+
+        printf("Enter author: ");
+        fgets(books[i].author, 50, stdin);
+        books[i].author[strcspn(books[i].author, "\n")] = '\0';
+
+        printf("Enter price: ");
+        scanf("%f", &books[i].price);
+
+        printf("Enter ISBN: ");
+        getchar();
+        fgets(books[i].isbn, 20, stdin);
+        books[i].isbn[strcspn(books[i].isbn, "\n")] = '\0';
+    }
+
+    printf("\nBooks with price above $500:\n");
+    for (int i = 0; i < 10; i++) {
+        if (books[i].price > 500) {
+            printf("\nTitle: %s\n", books[i].title);
+            printf("Author: %s\n", books[i].author);
+            printf("Price: $%.2f\n", books[i].price);
+            printf("ISBN: %s\n", books[i].isbn);
+        }
+    }
+
+    return 0;
+}
+
