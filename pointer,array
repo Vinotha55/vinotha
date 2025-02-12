@@ -1,0 +1,34 @@
+#include<stdio.h>
+int add(int,int);
+int sub(int,int);
+int mult(int,int);
+int div(int,int);
+int main()
+{
+  int a=20,b=10,i;
+  int(*fp[])(int,int )={add,sub,mult,div};
+  for(i=0;i<4;i++)
+  {
+  printf("the output of fp is %d\n",(fp[i])(a,b));
+  }
+  return 0;
+}
+int add(int x,int y)
+  {
+    return (x+y);
+  }
+int sub(int x,int y)
+  {
+    return (x-y);
+  }
+int mult(int x,int y)
+  {
+    return (x*y);
+  }
+int div(int x,int y)
+  {
+    return (x/y);
+  }
+
+
+
