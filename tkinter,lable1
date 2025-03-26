@@ -1,0 +1,43 @@
+from tkinter import*
+from tkinter import messagebox
+from PIL import Image,Image Tk
+top=Tk()
+top.title("PLAYER PROFILE")
+Top.config(bg="lightblue")
+top,geometry("1000x1000")
+top.resizable(True,True)
+
+#Image Place
+
+img=Image.open("Dhoni.png")
+img2=ImageTk.PhotoImage(img)
+imglable=Lable(top,image=img2)
+imglable.image=img2
+imglable.place(x=0,y=0)
+
+name=Lable(top,text="M S D H O N I",Font=('Algerian',40,'bold'),bg="#DBC400",fg="black")
+name.place(x=0,y=10)
+
+#lable
+role=Lable(top,text="ROLE",font=("Calibri",20,"bold"),bg="#DBC400",fg="black")
+role.place(x=0,y=150)
+bat=Lable(top,text="BATS",font=("Calibri",20,"bold"),bg="#DBC400",fg="black")
+bat.place(x=0,y=220)
+bowl=Lable(top,text="BOWLS",font=("Calibri",20,"bold"),bg="#DBC400",fg="black")
+bowl.place(x=0,y=290)
+catch=Lable(top,text="CATCH",font=("Calibri",20,"bold"),bg="#DBC400",fg="black")
+catch.place(x=0,y=360)
+role=Lable(top,text="WICKET KEEPING",font=("Calibri",20,"bold"),bg="#DBC400",fg="black")
+role.place(x=130,y=150)
+
+##
+bat=Lable(top,text="RIGHT HAND",font=("Calibri",20,"bold"),bg="#042B3A",fg="black")
+bat.place(x=130,y=220)
+##
+bowl=Lable(top,text="MEDIUM FAST",font=("Calibri",20,"bold"),bg="#042B3A",fg="black")
+bowl.place(x=130,y=290)
+##
+catch=Lable(top,text="500",font=("Calibri",20,"bold"),bg="#042B3A",fg="black")
+catch.place(x=130,y=360)
+top.mainloop()
+
