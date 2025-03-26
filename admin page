@@ -1,0 +1,10 @@
+#admin page
+def admin():
+  global a1,a11
+  a1=Frame(root,bg="#1A5276",height=1000,width=950)
+  a1.pack(fill=X)
+  a11=Frame(root,bg="white",height=1000,width=600)
+  a11.place(x=0,y=0)
+  
+  
+
