@@ -1,0 +1,23 @@
+from tkinter import*
+from tkinter import messagebox
+top=Tk()
+top.title("LOGIN SAMPLE")
+top.config(bg="lightblue")
+top.geometry("400x250")
+def msg():
+    messagebox.showinfo("THird Page","Welcome")
+    def nxt():
+        f1=Frame(Top,Height=1250,Width=1200,bg="pink")
+        f1.pack()
+        btn1=Button(f1,text="Next",width=10,font=("Vegan Style",10,"bold"),foreground="White",background="lightblue",command=msg).place(x=25,y=125)
+        btn2=Button(f1,text="Back",width=10,font=("Times New Roman",10,"bold"),foreground="white",background="lightblue",command=f1.destroy).place(x=150 ,y=125 )
+        name=Label(top,text="=Name").place(x=30,y=50)
+        password=Label(top,text="Password").place(x=30,y=100)
+        n1=Entry(top)
+        n1.place(x=100,y=50)
+        n2=Entry(top)
+        n2.place(x=100,y=100)
+        btn5=Button(top,text="OK",width=10,activebackground="yellow",font=("Times New Roman",10,"bold"),foreground="white",background="green",command=nxt).place(x=25,y=125)
+        top.mainloop()
+        
+
