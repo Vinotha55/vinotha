@@ -1,0 +1,13 @@
+from tkinter import*
+top=Tk()
+top.title("MY PYTHON CHAPTER")
+top.geometry("400x250")
+def ss():
+    print("HOW PYTHON ")
+btn5=Button(top,text="ok",width=10,activebackground="black",font=("Times New Roman",20,"bold"),foreground="white",background="#26B3E8",command=ss)
+btn5.place(x=0,y=0)
+btn6=Button(top,text="BACK",width=10,activebackground="yellow",font=("Times New Roman",20,"bold"),foreground="white",background="RED",command=top.destroy)
+btn6=place(x=200,y=0)
+top.mainloop()
+
+
