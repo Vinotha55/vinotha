@@ -1,0 +1,34 @@
+from tkinter import*
+from tkinter import messagebox
+from tkinter import ttk
+
+from PIL import Image,ImageTk
+
+admin_data=[]
+
+root=Tk()
+root.title('CRM')
+root.geometry("1530x800+0+0")
+root.resizable(True,True)
+root.configure(background='#1A5276')
+
+#......................Signin PAGES...............................
+img=Image.open("C:/Users/User/Desktop/logo/logo-icon-28.jpg")
+img=img.resize((150,150))
+img2=ImageTk.PhotoImage(img)
+imglabel=Label(root,image=img2,bg="#1A5276")
+imglabel.image=img2
+imglabel.place(x=560,y=100)
+
+label=Label(root,text="C R M S O F T W A R E",font=('century gothic',45,'bold'),fg="White",bg='#1A5276')
+label.place(x=350,y=280)
+
+label=Label(root,text="P o w e r e d B y I m a g e c o n",font=('century gothic',25,'bold'),fg="White",bg='#1A5276')
+label.place(x=400,y=370)
+
+btn_next=Button(root,text='GET STARTED',bg="White",fg="#1A5276",font=("Times New Roman",20,"bold"),height="2",width="25",bd=2,highlightthickness=5,padx=5,pady=5,highlightbackground="#1CA8D6")
+btn_next.place(x=440,y=550)
+
+root.mainloop()
+
+
