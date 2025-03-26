@@ -1,0 +1,16 @@
+from tkinter import*
+from tkinter import messagebox
+top=Tk()
+top.geometry("400x400")
+def fun():
+    messagebox.showinfo("Hello","All The BEst"
+                        )
+
+ def fun1():
+     messagebox.showerror("Hello","Something Wrong")
+
+b1=Button(top,text="Submit",command=fun)
+b1.pack()
+b2=Button(top,text="Cancel",command=fun1)
+b2.pack()
+        
