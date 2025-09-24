@@ -1,0 +1,21 @@
+import java.util.*;
+class Car
+{
+	static <T> void print(T obj)
+	
+	{
+		System.out.println(obj);
+		
+	}
+}
+class Main
+{
+	public static void main(String[] args)
+	{
+		Car c=new Car();
+		c.print("Welcome");
+		c.print(1000);
+		c.print(2084.287);
+		
+	}
+	}
