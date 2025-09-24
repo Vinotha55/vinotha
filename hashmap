@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main {
+	public static void main(String[] agrs)
+	{
+		HashMap<Integer,String>h=new HashMap<>();
+		h.put(1,"Vijay");
+		h.put(2,"Harish");
+		h.put(3,"null");
+		h.put(null,"Hello world");
+		h.put(4,"Renu");
+		h.put(7,"Sri");
+		h.put(5,"null");
+		h.put(6,"Ravi");
+		h.put(null,"to learn a java programmimng ");
+	    System.out.println(h);
+		
+	}
+
+}
