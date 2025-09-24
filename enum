@@ -1,0 +1,15 @@
+import java.util.*;
+class S1
+{
+	enum Day{
+	     Mon,Tues,Wednes,Thues,Fri,Satur,Sun;
+	}
+
+}
+public class Main{
+	public static void main(String[] args) { 
+	EnumSet<S1.Day>e=EnumSet.of(S1.Day.Mon,S1.Day.Tues,S1.Day.Wednes,S1.Day.Thues,S1.Day.Fri,S1.Day.Satur,S1.Day.Sun);
+	System.out.println(e);
+	}
+ }
+
